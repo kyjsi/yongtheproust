@@ -16,6 +16,8 @@ import {
   Globe,
   ExternalLink
 } from 'lucide-react';
+import HighschoolPortfolio from './components/HighschoolPortfolio';
+import MalaysiaFieldwork from './components/MalaysiaFieldwork';
 
 // --- Constants ---
 
@@ -470,7 +472,144 @@ const Research = () => {
 const Projects = () => {
   return (
     <PageTransition>
-      <SectionHeader title="Projects" subtitle="Building the Infrastructure" />
+      <SectionHeader title="Portfolio" subtitle="Sectoral & Applied Domain Beats" />
+      
+      {/* Portfolio Selector Beats */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+        {/* Beat 1: 입시 (College Admissions & Pedagogy) */}
+        <div className="newspaper-border p-6 bg-white flex flex-col justify-between shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+          <div>
+            <div className="flex justify-between items-start mb-2">
+              <span className="font-mono text-xs uppercase tracking-widest text-red-800 font-bold">
+                BEAT 01
+              </span>
+            </div>
+            <h3 className="font-serif text-3xl font-bold uppercase mb-2">
+              입시 (University Admission)
+            </h3>
+            <p className="font-mono text-[10px] uppercase opacity-60 mb-4 tracking-widest">
+              학종 케이스 스터디 & 지도 역량
+            </p>
+            <p className="text-neutral-700 text-sm leading-relaxed mb-6 font-medium">
+              "내신의 한계를 비교과 서사로 뚫어낸 학종 케이스, 그 방법을 학생에게 건넨다."
+            </p>
+          </div>
+          <Link 
+            to="/projects/highschool" 
+            className="w-full text-center font-mono text-xs uppercase bg-black text-white py-3 hover:bg-neutral-800 transition-colors inline-block font-bold"
+          >
+            포트폴리오 보러가기 →
+          </Link>
+        </div>
+
+        {/* Beat 2: 에너지 (Energy Systems) */}
+        <div className="newspaper-border p-6 bg-neutral-50/50 flex flex-col justify-between border-dashed">
+          <div>
+            <div className="flex justify-between items-start mb-2">
+              <span className="font-mono text-xs uppercase tracking-widest text-neutral-400 font-bold">
+                BEAT 02
+              </span>
+              <span className="text-[10px] font-mono uppercase bg-neutral-200 text-neutral-700 px-2 py-0.5 font-bold">
+                COMING SOON
+              </span>
+            </div>
+            <h3 className="font-serif text-3xl font-bold uppercase mb-2 text-neutral-400">
+              에너지 (Energy Systems)
+            </h3>
+            <p className="font-mono text-[10px] uppercase opacity-40 mb-4 tracking-widest text-neutral-400">
+              전기 · 신재생에너지 · 스마트그리드 연구
+            </p>
+            <p className="text-neutral-400 text-sm leading-relaxed mb-6">
+              전과에 성공한 후 쌓아온 전력망 분석, 발전 효율 향상(할바흐 배열, 코일 기하), 미국 에너지부(DOE) 및 발전 연구소 연수 보고서 등의 에너지 공학 연구 아카이브가 곧 업데이트됩니다.
+            </p>
+            <div className="flex flex-wrap gap-2 mb-6 opacity-40">
+              {["신재생에너지", "스마트그리드", "전력 제어", "에너지 하베스팅"].map((f, i) => (
+                <span key={i} className="text-[9px] font-mono uppercase px-2 py-1 border border-neutral-300">{f}</span>
+              ))}
+            </div>
+          </div>
+          <div 
+            className="w-full text-center font-mono text-xs uppercase bg-neutral-200 text-neutral-500 py-3 cursor-not-allowed inline-block font-bold"
+          >
+            에너지 아카이브 준비중
+          </div>
+        </div>
+
+        {/* Beat 3: 블록체인 (Blockchain) */}
+        <div className="newspaper-border p-6 bg-neutral-50/50 flex flex-col justify-between border-dashed">
+          <div>
+            <div className="flex justify-between items-start mb-2">
+              <span className="font-mono text-xs uppercase tracking-widest text-neutral-400 font-bold">
+                BEAT 03
+              </span>
+              <span className="text-[10px] font-mono uppercase bg-neutral-200 text-neutral-700 px-2 py-0.5 font-bold">
+                COMING SOON
+              </span>
+            </div>
+            <h3 className="font-serif text-3xl font-bold uppercase mb-2 text-neutral-400">
+              블록체인 (Blockchain)
+            </h3>
+            <p className="font-mono text-[10px] uppercase opacity-40 mb-4 tracking-widest text-neutral-400">
+              분산 원장 · 기후 금융 & DePIN
+            </p>
+            <p className="text-neutral-400 text-sm leading-relaxed mb-6">
+              kWh 단위 백업 자산, 온체인 탄소 배출권 실시간 검증(MRV) 인프라, 신재생 에너지 인증서(REC) 분산 원장 거래 기획 등 블록체인 기술 and 기후 기술의 교차점 탐색 기록입니다.
+            </p>
+            <div className="flex flex-wrap gap-2 mb-6 opacity-40">
+              {["토큰노믹스", "기후 금융", "DePIN", "분산원장"].map((f, i) => (
+                <span key={i} className="text-[9px] font-mono uppercase px-2 py-1 border border-neutral-300">{f}</span>
+              ))}
+            </div>
+          </div>
+          <div 
+            className="w-full text-center font-mono text-xs uppercase bg-neutral-200 text-neutral-500 py-3 cursor-not-allowed inline-block font-bold"
+          >
+            블록체인 아카이브 준비중
+          </div>
+        </div>
+
+        {/* Beat 4: Experiences (Experiences) */}
+        <div className="newspaper-border p-6 bg-neutral-50/50 flex flex-col justify-between border-dashed">
+          <div>
+            <div className="flex justify-between items-start mb-2">
+              <span className="font-mono text-xs uppercase tracking-widest text-neutral-400 font-bold">
+                BEAT 04
+              </span>
+              <span className="text-[10px] font-mono uppercase bg-neutral-200 text-neutral-700 px-2 py-0.5 font-bold">
+                COMING SOON
+              </span>
+            </div>
+            <h3 className="font-serif text-3xl font-bold uppercase mb-2 text-neutral-400">
+              Experiences
+            </h3>
+            <p className="font-mono text-[10px] uppercase opacity-40 mb-4 tracking-widest text-neutral-400">
+              게스트하우스 운영 · 건설현장 · 여행 등 결이 다른 경험
+            </p>
+            <p className="text-neutral-400 text-sm leading-relaxed mb-6">
+              학업과 공학 연구 바깥에서 마주한 세상의 이야기입니다. 제주 게스트하우스 스태프/운영 경험, 일당직 건설현장(노가다) 노동 기록, 배낭 하나로 세상을 직접 밟으며 배운 글로벌 여행 아카이브입니다.
+            </p>
+            <div className="flex flex-wrap gap-2 mb-6 opacity-40">
+              {["게스트하우스", "건설현장 노동", "글로벌 여행", "생존 기록"].map((f, i) => (
+                <span key={i} className="text-[9px] font-mono uppercase px-2 py-1 border border-neutral-300">{f}</span>
+              ))}
+            </div>
+          </div>
+          <div 
+            className="w-full text-center font-mono text-xs uppercase bg-neutral-200 text-neutral-500 py-3 cursor-not-allowed inline-block font-bold"
+          >
+            Experiences 아카이브 준비중
+          </div>
+        </div>
+      </div>
+
+      {/* Featured University Projects Header */}
+      <div className="border-b-2 border-black pb-2 mb-8 mt-16">
+        <span className="font-mono text-xs uppercase tracking-widest text-red-800 font-bold">PREVIEW PROJECTS</span>
+        <h2 className="font-serif text-2xl font-bold uppercase text-black">
+          Featured Academic Projects (대학 일부 수행 과제)
+        </h2>
+      </div>
+
       <div className="space-y-12">
         {[
           {
@@ -482,10 +621,11 @@ const Projects = () => {
           },
           {
             title: "Global Frontier Project",
-            tagline: "International Energy Research",
+            tagline: "International Energy Research (Malaysia Fieldwork)",
             desc: "Focused on energy and renewable certificate systems in Southeast Asia. Activities included interviewing institutions, analyzing REC markets, and researching verification issues in Malaysia.",
             features: ["Market analysis", "Institutional interviews", "Verification research", "Regional coordination"],
-            img: "https://picsum.photos/seed/frontier/800/400"
+            img: "https://picsum.photos/seed/frontier/800/400",
+            link: "/projects/malaysia"
           },
           {
             title: "Energy Tokenization Research",
@@ -495,7 +635,7 @@ const Projects = () => {
             img: "https://picsum.photos/seed/token/800/400"
           }
         ].map((p, i) => (
-          <div key={i} className="grid grid-cols-1 md:grid-cols-2 gap-8 newspaper-border p-6">
+          <div key={i} className="grid grid-cols-1 md:grid-cols-2 gap-8 newspaper-border p-6 bg-white">
             <div className={i % 2 === 1 ? 'md:order-2' : ''}>
               <motion.img 
                 src={p.img} 
@@ -508,12 +648,22 @@ const Projects = () => {
             <div className="flex flex-col justify-center">
               <h3 className="font-serif text-3xl font-bold uppercase mb-1">{p.title}</h3>
               <p className="font-mono text-xs uppercase opacity-60 mb-4 tracking-widest">{p.tagline}</p>
-              <p className="text-lg mb-6 leading-relaxed">{p.desc}</p>
-              <div className="flex flex-wrap gap-2">
+              <p className="text-lg mb-6 leading-relaxed text-neutral-700">{p.desc}</p>
+              <div className="flex flex-wrap gap-2 mb-6">
                 {p.features.map((f, j) => (
-                  <span key={j} className="text-[10px] font-mono uppercase px-2 py-1 border border-black">{f}</span>
+                  <span key={j} className="text-[10px] font-mono uppercase px-2 py-1 border border-black/25">{f}</span>
                 ))}
               </div>
+              {p.link && (
+                <div>
+                  <Link 
+                    to={p.link}
+                    className="font-mono text-xs uppercase bg-black text-white hover:bg-neutral-800 transition-colors px-4 py-2 inline-flex items-center gap-2"
+                  >
+                    상세 보고서 보기 <ExternalLink size={12} />
+                  </Link>
+                </div>
+              )}
             </div>
           </div>
         ))}
@@ -714,6 +864,8 @@ export default function App() {
               <Route path="/about" element={<About />} />
               <Route path="/research" element={<Research />} />
               <Route path="/projects" element={<Projects />} />
+              <Route path="/projects/highschool" element={<HighschoolPortfolio />} />
+              <Route path="/projects/malaysia" element={<MalaysiaFieldwork />} />
               <Route path="/experiments" element={<Experiments />} />
               <Route path="/travel" element={<Travel />} />
               <Route path="/writing" element={<Writing />} />
