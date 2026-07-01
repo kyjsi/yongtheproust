@@ -93,7 +93,7 @@ export default function HighschoolPortfolio() {
           <ChevronRight size={12} />
           <Link to="/projects" className="hover:text-black hover:underline">PORTFOLIO</Link>
           <ChevronRight size={12} />
-          <span className="text-black font-bold">HIGHSCHOOL</span>
+          <span className="text-black font-bold">UNIVERSITY ADMISSION</span>
         </div>
         <h1 className="font-serif text-4xl md:text-6xl font-bold uppercase tracking-tight leading-none text-black">
           University Admission
